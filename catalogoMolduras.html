@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catálogo de Molduras | MADEEA</title>
+<meta name="description" content="Catálogo interactivo de molduras MADEEA: guardaluces, zócalos, esquineros, bolillos, media caña y más. Busca por referencia y consulta por WhatsApp.">
+<link rel="icon" href="assets/logo-crop.jpg">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/catalogo.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-brand">
+      <span class="logo-chip"><img src="assets/logo-crop.jpg" alt="Logo MADEEA"></span>
+      <span>
+        <strong>MADEEA</strong>
+        <span>Arte en tu espacio</span>
+      </span>
+    </a>
+    <nav class="nav-links" aria-label="Navegación principal">
+      <a href="index.html">Inicio</a>
+      <a href="select.html">Catálogo</a>
+      <a href="index.html#nosotros">Nosotros</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+    <div class="nav-actions">
+      <a data-wa-generic href="#" class="btn btn-ghost">WhatsApp</a>
+      <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu">
+  <a href="index.html">Inicio</a>
+  <a href="select.html">Catálogo</a>
+  <a href="index.html#nosotros">Nosotros</a>
+  <a href="index.html#contacto">Contacto</a>
+  <a class="btn btn-primary" data-wa-generic href="#">Contactar por WhatsApp</a>
+</div>
+
+<section class="catalog-hero">
+  <div class="container">
+    <div class="crumbs"><a href="index.html">Inicio</a> &nbsp;/&nbsp; <a href="select.html">Catálogo</a> &nbsp;/&nbsp; Molduras</div>
+    <h1>Catálogo de Molduras</h1>
+    <p>Explora todas nuestras referencias en madera. Usa el buscador o filtra por categoría para encontrar exactamente lo que necesitas.</p>
+  </div>
+</section>
+
+<div class="catalog-toolbar">
+  <div class="container toolbar-inner">
+    <div class="search-box">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input type="text" id="search-input" placeholder="Buscar por referencia… ej. 402" autocomplete="off">
+    </div>
+    <div class="filter-chips" id="filter-chips">
+      <button class="filter-chip active" data-cat="todas">Todas</button>
+    </div>
+    <span class="results-count" id="results-count"></span>
+  </div>
+</div>
+
+<section class="catalog-grid-wrap">
+  <div class="container">
+    <div class="catalog-grid" id="catalog-grid"></div>
+  </div>
+</section>
+
+<footer class="footer" id="contacto">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <span class="logo-chip"><img src="assets/logo-crop.jpg" alt="MADEEA"></span>
+          <strong>MADEEA</strong>
+        </div>
+        <p style="font-size:0.9rem; line-height:1.7; max-width:34ch;">Molduras de madera para arquitectura y diseño de interiores. Arte en tu espacio.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/madeea_col" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a data-wa-generic href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.81L2 22l5.42-1.42a9.9 9.9 0 0 0 4.62 1.18h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.51 2 12.05 2Z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Navegación</h5>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="select.html">Catálogo</a></li>
+          <li><a href="index.html#nosotros">Nosotros</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contacto</h5>
+        <ul>
+          <li><a data-wa-generic href="#">WhatsApp</a></li>
+          <li><a href="mailto:mundoinversionesrestrepo@gmail.com">mundoinversionesrestrepo@gmail.com</a></li>
+          <li><a href="https://instagram.com/madeea_col" target="_blank" rel="noopener">@madeea_col</a></li>
+          <li>Medellín, Colombia</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 MADEEA. Todos los derechos reservados.</span>
+      <span>Diseñado y desarrollado por <a href="#">Lavitic</a></span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" data-wa-generic href="#" aria-label="Escríbenos por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.81L2 22l5.42-1.42a9.9 9.9 0 0 0 4.62 1.18h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.51 2 12.05 2Zm0 18.13h-.01a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.53 3.7-8.22 8.24-8.22 2.2 0 4.27.86 5.83 2.42a8.17 8.17 0 0 1 2.41 5.82c0 4.53-3.7 8.2-8.24 8.2Zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.4-.12-.56.13-.17.25-.65.81-.79.97-.15.17-.29.19-.54.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.71-.15-.25-.02-.38.11-.51.11-.11.25-.29.37-.44.12-.15.16-.25.24-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.08 0 1.22.89 2.4 1.01 2.57.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.29Z"/></svg>
+</a>
+
+<script src="js/productos.js"></script>
+<script src="js/main.js"></script>
+<script src="js/catalogo.js"></script>
+</body>
+</html>

@@ -120,6 +120,7 @@
   align-items:center;
   gap: 22px;
   flex-wrap:wrap;
+  max-width: 100%;
 }
 .search-box{
   position:relative;
@@ -147,11 +148,14 @@
   border-color: var(--wood);
   box-shadow: 0 0 0 4px rgba(185,137,90,0.16);
 }
+.filter-chips-scroll{
+  flex: 2 1 420px;
+  min-width: 0;
+}
 .filter-chips{
   display:flex;
   gap: 10px;
   flex-wrap:wrap;
-  flex: 2 1 420px;
 }
 .filter-chip{
   padding: 9px 18px;
@@ -271,19 +275,38 @@
   .catalog-grid{ grid-template-columns: repeat(3,1fr); }
 }
 @media (max-width: 720px){
-  .toolbar-inner{ flex-direction:column; align-items:stretch; }
-  .search-box{ max-width:none; flex: none; }
-  .filter-chips{
+  .toolbar-inner{ flex-direction:column; align-items:stretch; width:100%; }
+  .search-box{ max-width:none; flex: none; width:100%; }
+
+  /* Carrusel de filtros: scroll horizontal contenido, sin empujar la página */
+  .filter-chips-scroll{
     flex: none;
-    align-items: center;
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    padding-bottom: 6px;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: thin;
+    width: 100%;
+    min-width: 0;
+    /* velo de desvanecido en los bordes para insinuar que hay más contenido */
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 22px, #000 calc(100% - 30px), transparent 100%);
+            mask-image: linear-gradient(90deg, transparent 0, #000 22px, #000 calc(100% - 30px), transparent 100%);
   }
-  .filter-chip{ flex: none; }
-  .results-count{ text-align:right; }
+  .filter-chips{
+    display: flex;
+    flex-wrap: nowrap;
+    flex: none;
+    width: 100%;
+    min-width: 0;              /* clave: evita que el flex-item empuje la página entera */
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 2px 22px 10px;
+    margin: 0 -22px;           /* compensa el padding para que el primer/último chip llegue al borde */
+  }
+  .filter-chips::-webkit-scrollbar{ display:none; }
+  .filter-chip{
+    flex: none;
+    min-width: max-content;
+    scroll-snap-align: start;
+  }
+  .results-count{ text-align:left; }
 }
 @media (max-width: 640px){
   .category-grid{ grid-template-columns: 1fr; }

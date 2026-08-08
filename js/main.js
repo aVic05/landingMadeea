@@ -7,7 +7,7 @@
 (function () {
   "use strict";
 
-  const WHATSAPP_NUMBER = "573000000000"; // TODO: reemplazar por el número real de MADEEA
+  const WHATSAPP_NUMBER = "573147027313";
 
   /* ---------------------------------------------------------------------
      1. Header dinámico: cambia de estilo al hacer scroll
